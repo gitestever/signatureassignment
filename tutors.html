@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!-- 
+    Tutor page 
+    Flexbox model
+-->
+
+<head>
+    <title>A+ Tutoring</title>
+    <link href="./stylesheets/tutoring.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kevin Mei">
+
+    <!-- icon next to tab title-->
+    <link rel="icon" type="image/x-icon" href="./images/branding/favi.png">
+
+    <!-- custom font from google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <script src="./scripts/functions.js"></script>
+</head>
+
+<body onload="showCurrentTime()">
+    <div class="page-container">
+
+        <header>
+            <!-- custom logo created using canva-->
+            <a href="./index.html"><img src="./images/branding/mainlogo.png" alt="mainlogo"></a>
+        </header>
+
+        <!-- nav bar-->
+        <nav>
+            <!-- 5 main menu buttons-->
+            <a href="./index.html">Home</a>
+            <a href="./tutors.html" class="active">Tutors</a>
+            <a href="./plans.html">Plans</a>
+            <a href="./about.html">About</a>
+            <a href="./join.html">Join us!</a>
+        </nav>
+
+        <!-- main content -->
+        <main>
+
+            <section class="subject-flex-container">
+                <div id="subject-heading">
+                    <h1>Subjects</h1>
+                    <p>Our tutors teach the following subjects. Explore and find your tutor!</p>
+                </div>
+                <a href="#math" id="math-button">Math</a>
+                <a href="#english" id="english-button">English</a>
+                <a href="#science" id="science-button">Science</a>
+                <a href="#physics" id="physics-button">Physics</a>
+            </section>
+
+            <section class="tutor-flex-container">
+                <h1>Our Tutors</h1>
+                <!-- Leonard's tutor card -->
+                <div class="tutor-card" id="math">
+                    <div class="tutor-image">
+                        <!-- image from pinterest Big Bang Theory series https://www.pinterest.com/pin/73676143888578013/-->
+                        <img class="avatar" src="./images/tutors/leonard1.jpg" alt="leonard">
+                        <h1>Leonard</h1>
+                    </div>
+                    <div class="tutor-experience">
+                        <h2>Experience</h2>
+                        <p>As a dedicated math tutor, I'm passionate about helping students unlock their mathematical
+                            potential. Whether its algebra, calculus or geometry, I've got you covered! My approach is
+                            interactive and personalized using visual aid and modern technology to make learning
+                            engaging and effective. Let's conquer math!
+                        </p>
+                        <h2>Services</h2>
+                        <div class="services">
+                            <p>Test Prep</p>
+                            <p>Review</p>
+                            <p>Homework</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Penny's tutor card -->
+                <div class="tutor-card" id="english">
+                    <div class="tutor-image">
+                        <!-- image from pinterest Big Bang Theory series https://www.pinterest.com/pin/kaley-cuoco- -450711875188372087/ -->
+                        <img class="avatar" src="./images/tutors/penny1.jpg" alt="penny">
+                        <h1>Penny</h1>
+                    </div>
+                    <div class="tutor-experience">
+                        <h2>Experience</h2>
+                        <p> Hi! I'm Penny, and I'm deeply passionate about literature and storytelling! With years of
+                            teaching experience, I understand the unique needs of each student. My personalized sessions
+                            focus on building strong language skills and communication abilities. Whether its writing
+                            essays, diving into classic novels, mastering grammar or understanding Shakespearean
+                            sonnets, I'm here to guide you! </p>
+                        <h2>Services</h2>
+                        <div class="services">
+                            <p>Review</p>
+                            <p>Homework</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rajs's tutor card -->
+                <div class="tutor-card" id="science">
+                    <div class="tutor-image">
+                        <!-- image from pinterest Big Bang Theory series https://www.pinterest.com/pin/317151998760990735/-->
+                        <img class="avatar" src="./images/tutors/raj.jpg" alt="raj">
+                        <h1>Raj</h1>
+                    </div>
+                    <div class="tutor-experience">
+                        <h2>Experience</h2>
+                        <p>As a research scientist with great passion for chemistry and biology, I can make concepts accessible and engaging with visuals, ensuring
+                            that students not only understand the material but also appreciate the reasons for science
+                            around us. Whether we’re diving into periodic elements, conducting lab experiments, or
+                            exploring photosynthesis, my patient and customized sessions will help students truly
+                            understand the fascinating world of science!</p>
+                        <h2>Services</h2>
+                        <div class="services">
+                            <p>Test Prep</p>
+                            <p>Review</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sheldon's tutor card -->
+                <div class="tutor-card" id="physics">
+                    <div class="tutor-image">
+                        <!-- image from pinterest Big Bang Theory series https://www.pinterest.com/pin/502925483385897651/-->
+                        <img class="avatar" src="./images/tutors/sheldon.jpg" alt="sheldon">
+                        <h1>Sheldon</h1>
+                    </div>
+                    <div class="tutor-experience">
+                        <h2>Experience</h2>
+                        <p>Sheldon here, I am the founder of A+ Tutoring! My friends and I realize the importance of
+                            unlocking potential in each and every one of us. This is a belief my friends and I share
+                            since that summer day in Greece. You will find our passion for this in our sessions where I
+                            encourage critical thinking and problem-solving skills. With the whiteboard, my sessions
+                            will be fun and engaging. I'm very dedicated to ensuring that each student achieve their
+                            full potential in understanding the wonders of physics. Did I mention I'm a particle
+                            physicist?</p>
+                        <h2>Services</h2>
+                        <div class="services">
+                            <p>Review</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- footer -->
+        <footer>
+            <div>
+                <!-- javascript function that updates the time and shows if office is close or open-->
+                <p id="display" style="font-weight: bold">""</p>
+                <br>
+                <p>1 Big Bang Theory Alley, Boston MA 02115</p>
+                <p>Open Monday - Saturday 11:00 AM to 6:00 PM</p>
+                <!-- link to email, for example purposes-->
+                <a href="mailto:contact@aplus_tutoring.com">contact@aplus__tutoring.com</a>
+                <br>
+            </div>
+            <p>Copyright © 2024 <span style="font-style: italic;">A + Tutoring</span></p>
+        </footer>
+
+    </div>
+</body>
+
+</html>

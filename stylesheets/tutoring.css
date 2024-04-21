@@ -1,0 +1,903 @@
+/* ITC2400 Signature web assignment by Kevin Mei */
+
+/* Color palette reference
+
+    Five Main Colors
+    rgb(220, 230, 250)   background color, light blue
+    #F4EFEC              background color #2, light beige
+    #5201FE              font color, purple (I choose purple because it contrasts well with the above background colors, readability)
+    rgb(255, 80, 80)     button color
+    #313131              font color #2 , a softer black
+
+    Subject Colors
+    Inspired by post it notes
+    rgb(255, 210, 130)  math leonard's color (similar to yellow)
+    rgb(255, 175, 187)  english penny's color (similar to pink)
+    rgb(20, 230, 250)   science raj's color (similar to blue)
+    rgb(83, 226, 186)   physics sheldon's color (similar to green)
+
+    I choose these colors because my audience are students grades 6 to 12
+    The font I went with for headings is Fredoka for readability.
+*/
+
+/* I choose to showcase grid, flex, and float in different pages */
+
+/********************** 
+
+    Default styling for semantic elements for all pages
+
+**********************/
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: "Fredoka", sans-serif;
+    font-weight: 500;
+    text-align: center;
+    font-size: 32px;
+}
+
+h2 {
+    font-family: "Fredoka", sans-serif;
+    font-weight: 500;
+    text-align: center;
+    font-size: 25px;
+}
+
+body {
+    margin: 0px 16px;
+    background-color: rgb(220, 230, 250);
+    color: #5201FE;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    margin-top: 32px;
+    text-align: center;
+}
+
+header a img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+main {
+    margin-top: 32px;
+}
+
+footer {
+    background-color: #F4EFEC;
+    margin-top: 16px;
+    margin-bottom: 32px;
+    padding: 16px;
+    text-align: center;
+    font-size: 12px;
+    background-color: white;
+}
+
+footer a {
+    font-size: 16px;
+}
+
+/********************** 
+
+    Navbar for all pages
+
+**********************/
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #F4EFEC;
+    line-height: 48px;
+    border-radius: 8px;
+    box-shadow: 1px 2px 3px #313131;
+    padding: 0px 8px;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+nav a {
+    display: inline-block;
+    padding: 0 12px;
+    text-decoration: none;
+    margin-bottom: 5px;
+    color: #313131;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+/* nav links visited, hover, active in that order to work**/
+nav a:visited {
+    color: #5201FE;
+}
+
+nav a:hover {
+    color: #5201FE;
+    background-color: rgb(220, 230, 250);
+    box-shadow: 0px 5px 0px 0px rgb(255, 210, 130);
+    /* animation */
+    transition: 0.5s;
+}
+
+nav a.active {
+    box-shadow: 0px 5px 0px 0px rgb(255, 210, 130);
+}
+
+/********************** 
+
+    Home page start 
+    Showcases flexbox (small)
+
+**********************/
+
+/************** welcome flexbox parent container ************/
+.welcome-flex-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #F4EFEC;
+    padding: 48px 16px;
+    border-radius: 8px;
+    justify-content: center;
+}
+
+.welcome-video-container {
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.welcome-video {
+    /** video size **/
+    width: 100%;
+    height: 300px;
+    min-width: 300px;
+    max-width: 300px;
+    border-radius: 8px;
+    /** video cropping **/
+    object-fit: cover;
+    object-position: 0 -200px;
+}
+
+.welcome-message-container {
+    padding: 8px;
+}
+
+/* action buttons */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* action button, style for see tutors button  */
+.button-1 {
+    display: inline;
+    text-align: center;
+    padding: 10px 24px;
+    border: solid 1px black;
+    border-radius: 8px;
+    background-color: white;
+    font-weight: bold;
+    text-decoration: none;
+    color: #5201FE;
+    line-height: 100%;
+}
+
+/* action button, style for join us button  */
+.button-2 {
+    display: inline;
+    text-align: center;
+    padding: 10px 24px;
+    border-radius: 8px;
+    background-color: rgb(255, 80, 80);
+    font-weight: bold;
+    text-decoration: none;
+    color: #F4EFEC;
+    ;
+    line-height: 100%;
+}
+
+/* action button pseudo classes - visual feedback on hover */
+.button-1:hover {
+    color: #F4EFEC;
+    background-color: #5201FE;
+}
+
+.button-2:hover {
+    text-decoration: underline;
+}
+
+/************** information flexbox parent container ************/
+.information-flex-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 8px;
+    text-align: center;
+    background-color: white;
+    border-radius: 8px;
+    margin-top: 16px;
+}
+
+.services-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.information-flex-container img {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/********************** 
+
+    Tutor page start 
+    Showcases flexbox (small)
+
+**********************/
+
+/************** subject flexbox parent container ************/
+.subject-flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F4EFEC;
+    flex-wrap: wrap;
+    font-weight: bold;
+    gap: 8px;
+    border-radius: 8px;
+    padding: 16px 8px;
+}
+
+#subject-heading {
+    width: 100%;
+    text-align: center;
+}
+
+.subject-flex-container a {
+    display: inline-block;
+    padding: 16px;
+    background-color: gold;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    margin: 16px 0;
+    color: #313131;
+    font-family: "Fredoka", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+#math-button {
+    background-color: rgb(255, 210, 130);
+}
+
+#english-button {
+    background-color: rgb(255, 175, 187);
+}
+
+#science-button {
+    background-color: rgb(20, 230, 250);
+}
+
+#physics-button {
+    background-color: rgb(83, 226, 186);
+}
+
+#math-button:hover,
+#english-button:hover,
+#science-button:hover,
+#physics-button:hover {
+    background-color: rgb(220, 230, 250);
+    color: #5201FE;
+}
+
+/************** tutor flexbox parent container ************/
+.tutor-flex-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #F4EFEC;
+    margin-top: 16px;
+    border-radius: 8px;
+}
+
+.tutor-card {
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+}
+
+.tutor-image {
+    text-align: center;
+}
+
+.avatar {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 30px;
+    height: auto;
+}
+
+.tutor-experience {
+    padding: 0px 16px;
+    background-color: #F4EFEC;
+    border-radius: 8px;
+}
+
+.services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.services p {
+    font-family: "Fredoka";
+    font-size: 16px;
+}
+
+#math {
+    border-radius: 20px 20px 0 0;
+    background-color: rgb(255, 210, 130);
+}
+
+#english {
+    background-color: rgb(255, 175, 187);
+}
+
+#science {
+    background-color: rgb(20, 230, 250);
+}
+
+#physics {
+    background-color: rgb(83, 226, 186);
+}
+
+/********************** 
+
+    Join page start 
+    Showcases float and box model
+
+**********************/
+
+/************** Float container for plans  ************/
+.float-container {
+    background-image: url('../images/plan_background.png');
+    /* 
+        background image to make the page plan pop 
+        Image from freepik
+        https://www.freepik.com/free-vector/flat-back-school-background-with-school-supplies_28149172.htm
+    */
+    background-position: center top;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.float-1,
+.float-2 {
+    float: none;
+    /* float activates in medium and large screens */
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    height: 430px;
+    color: black;
+}
+
+.flex h1 {
+    color: rgb(20, 209, 156);
+    background-color: rgb(255, 215, 140);
+}
+
+.smart h1 {
+    color: rgb(255, 50, 43);
+    background-color: rgb(192, 247, 233);
+}
+
+.flex ul li,
+.smart ul li {
+    margin-bottom: 12px;
+}
+
+/********************** 
+
+    About page start 
+    Showcases gridview (small)
+
+**********************/
+
+/************** Grid parent container ************/
+.about-grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat(8, auto);
+    background-color: #F4EFEC;
+    padding: 16px;
+    border-radius: 16px;
+    gap: 20px;
+}
+
+/************** Grid items ************/
+.story-grid-item {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
+
+.video-grid-item {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    text-align: center;
+    margin: 32px 0;
+}
+
+.image-grid-item-1 {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+    text-align: center;
+}
+
+.review-grid-item {
+    grid-column: 1 / 3;
+    grid-row: 4 / 6;
+}
+
+.image-grid-item-2 {
+    grid-column: 1 / 3;
+    grid-row: 6 / 7;
+    text-align: center;
+}
+
+.image-grid-item-3 {
+    grid-column: 1 / 3;
+    grid-row: 7 / 8;
+    text-align: center;
+}
+
+.sponsors-grid-item {
+    grid-column: 1 / 3;
+    grid-row: 9 / 10;
+}
+
+.about-video {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 30px;
+}
+
+.about-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 16px;
+}
+
+.about-review-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* styling for review quotes */
+blockquote {
+    font-style: italic;
+    background-color: white;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.sponsors-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.sponsors-image-container>div {
+    margin: 32px;
+}
+
+.sponsors-image-container img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}
+
+/********************** 
+
+    Join us page start 
+    Showcases responsive grid form (small)
+
+**********************/
+
+/************** form grid parent container ************/
+.form-grid-container {
+    display: grid;
+    background-color: #F4EFEC;
+    padding: 16px;
+    border-radius: 8px;
+    grid-template-rows: repeat(11, auto);
+}
+
+.form-item-grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-bottom: 24px;
+    font-size: 16px;
+}
+
+/********************** 
+
+    Form Input Rulesets
+
+**********************/
+
+input[type=submit] {
+    padding: 16px 32px;
+    font-size: 16px;
+    border-radius: 8px;
+    color: white;
+    background-color: #5201FE;
+    border-style: solid;
+    border-color: #5305fc;
+}
+
+input[type=submit]:hover {
+    color: #5201FE;
+    background-color: white;
+    border-style: solid;
+    border-color: #5201FE;
+}
+
+input[type=text],
+input[type="email"],
+input[type="tel"],
+select {
+    font-size: 16px;
+    border-radius: 8px;
+    padding: 8px;
+    border-color: #5201FE;
+    border-width: 1px;
+    width: 100%;
+}
+
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=tel]:focus,
+select:focus,
+textarea:focus {
+    outline: #5201FE solid 2px;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    box-sizing: border-box;
+    resize: none;
+    border-radius: 5px;
+    border: 1px solid #5201FE;
+    padding: 1rem;
+    font-family: 'Arial';
+}
+
+input[type=checkbox] {
+    width: 30px;
+    height: 30px;
+}
+
+.checkbox-tutors {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    padding-top: 12px;
+    margin-bottom: 8px;
+}
+
+.form-input {
+    display: flex;
+    width: 100%;
+}
+
+.join-description {
+    text-align: center;
+    margin-bottom: 24px;
+    border-radius: 8px;
+    background-color: #F4EFEC;
+    padding: 20px;
+}
+
+.contact-image {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 20px;
+}
+
+/********************** 
+
+    Median Screens (tablets)
+
+**********************/
+
+@media screen and (min-width: 480px) {
+
+    body {
+        margin: 0px 32px;
+    }
+
+    header {
+        margin-top: 64px;
+    }
+
+    main {
+        margin-top: 42px;
+    }
+
+    footer {
+        margin-top: 42px;
+    }
+
+    nav {
+        margin-top: 32px;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 20px;
+    }
+
+    /********************** 
+
+        Home page continue 
+        Showcases flexbox (medium)
+        additional styling and some rule overrides
+
+    **********************/
+
+    .welcome-flex-container {
+        align-items: center;
+        padding: 64px;
+    }
+
+    .welcome-message-container {
+        padding: 8px;
+    }
+
+    .button-container {
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 24px;
+    }
+
+    /********************** 
+
+        Tutor page continue 
+        Showcases flexbox (medium)
+        additional styling and some rule overrides
+
+    **********************/
+
+    .services-container {
+        flex-direction: row;
+    }
+
+    .services {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    /********************** 
+
+        Plan page continue
+        Showcases Float and Box Model (applies to medium and large screens)
+
+    **********************/
+
+    .float-container {
+        padding: 16px;
+        height: 600px;
+    }
+
+    .float-1,
+    .float-2 {
+        float: left;
+        /* float activated  */
+        width: 50%;
+        height: 550px;
+    }
+
+    /* Pseudo element for clearing elements after the float */
+    .float-container::after {
+        content: " ";
+        display: table;
+        clear: both;
+    }
+
+    /********************** 
+
+        About page continue 
+        Showcases gridview (medium)
+
+    **********************/
+
+    .image-grid-item-1 {
+        grid-column: 1 / 3;
+        grid-row: 3 / 4;
+        text-align: center;
+    }
+
+    .review-grid-item {
+        grid-column: 1 / 3;
+        grid-row: 4 / 6;
+    }
+
+    .image-grid-item-2 {
+        grid-column: 1 / 2;
+        grid-row: 6 / 7;
+        text-align: center;
+    }
+
+    .image-grid-item-3 {
+        grid-column: 2 / 3;
+        grid-row: 6 / 7;
+        text-align: center;
+    }
+
+    /********************** 
+
+        Join us page continue 
+        Showcases gridview responsive form (medium)
+
+    **********************/
+
+    .form-grid-container {
+        padding: 32px;
+    }
+    
+    .form-label {
+        margin-left: 8px;
+    }
+
+    .checkbox-tutors {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+/********************** 
+
+    Large Screens (desktops and laptops)
+
+**********************/
+
+@media screen and (min-width: 1280px) {
+    body {
+        margin: 0 120px;
+    }
+
+    main {
+        margin-top: 64px;
+    }
+
+    /********************** 
+
+        Home page continue 
+        Showcases flexbox (large)
+
+    **********************/
+
+    .welcome-flex-container {
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 64px;
+    }
+
+    .welcome-video-container {
+        width: 50%;
+       text-align: center;
+    }
+
+    .welcome-message-container {
+        width: 50%;
+    }
+
+    .button-container {
+        flex-direction: column;
+    }
+
+    /********************** 
+
+        Tutor page continue 
+        Showcases flexbox (large)
+
+    **********************/
+
+    .services {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .tutor-card {
+        flex-direction: row;
+        gap: 24px;
+    }
+
+    .tutor-image {
+        width: 30%;
+    }
+
+    .tutor-experience {
+        width: 70%;
+        line-height: 24px;
+    }
+
+    /********************** 
+
+        About page continue 
+        Showcases gridview (large)
+
+    **********************/
+
+    .review-grid-item {
+        grid-column: 1 / 2;
+        grid-row: 4 / 6;
+    }
+
+    .image-grid-item-1 {
+        grid-column: 1 / 3;
+        grid-row: 3 / 4;
+        text-align: center;
+    }
+
+    .image-grid-item-2 {
+        grid-column: 2 / 3;
+        grid-row: 4 / 5;
+        text-align: center;
+    }
+
+    .image-grid-item-3 {
+        grid-column: 2 / 3;
+        grid-row: 5 / 6;
+        text-align: center;
+    }
+
+    .about-image {
+        width: 100%;
+        max-width: 300px;
+        border-radius: 16px;
+    }
+
+    /********************** 
+
+        Join us page continue 
+        Showcases gridview responsive form (large)
+
+    **********************/
+
+    .form-grid-container {
+        grid-template-rows: repeat(10, auto);
+        padding: 48px;
+    }
+
+    .form-label {
+        grid-column: 1 / span 1;
+        font-weight: bold;
+        margin-left: 42px;
+    }
+
+    .form-input {
+        grid-column: 2 / span 3;
+        width: 100%;
+    }
+
+    .form-item-grid-container {
+        grid-template-columns: 1fr 2fr;
+    }
+}

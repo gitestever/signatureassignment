@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!-- 
+    About page
+    Gridview Model
+-->
+
+<head>
+    <title>A+ Tutoring</title>
+    <link href="./stylesheets/tutoring.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kevin Mei">
+
+    <!-- icon next to tab title-->
+    <link rel="icon" type="image/x-icon" href="./images/branding/favi.png">
+
+    <!-- custom font from google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <script src="./scripts/functions.js"></script>
+</head>
+
+<body onload="showCurrentTime()">
+    <div class="page-container">
+
+        <header>
+            <!-- custom logo created using canva-->
+            <a href="./index.html"><img src="./images/branding/mainlogo.png" alt="mainlogo"></a>
+        </header>
+
+        <!-- nav bar-->
+        <nav>
+            <!-- 5 main menu buttons-->
+            <a href="./index.html">Home</a>
+            <a href="./tutors.html">Tutors</a>
+            <a href="./plans.html">Plans</a>
+            <a href="./about.html" class="active">About</a>
+            <a href="./join.html">Join us!</a>
+        </nav>
+
+        <!-- main content -->
+        <main>
+
+            <div class="about-grid-container">
+
+                <!--grid child for Story-->
+                <div class="story-grid-item">
+                    <h1>Our Story</h1>
+                    <p>A+ Tutoring started as an idea among a group of close friends. We believe every student has
+                        potential. So we materialized our vision into reality. Fast forward today, we have successfully
+                        helped many students excel their education.</p>
+                </div>
+
+                <!--grid child for Review-->
+                <div class="review-grid-item">
+                    <div class="reviews">
+                        <p>Student Jenny says</p>
+                        <blockquote>
+                            "In school, I had difficulty with math concepts. With tutoring from Leonard, I was able
+                            understand the material to pass my finals! Whenever I had questions, Leonard responded
+                            quickly"
+                        </blockquote>
+                        <p>Student Mikal says</p>
+                        <blockquote>
+                            "Sheldon is awesome!!! His ability to explain physics with passion really transformed my
+                            study
+                            sessions into enjoyable experiences! Thanks to Sheldon, I aced all my exams!"
+                        </blockquote>
+                        <p>Parent Kate says</p>
+                        <blockquote>
+                            "Amazing, just amazing. I saw my daughter improved writing essays just after a few sessions
+                            with
+                            Penny. Penny has a unique approach that I'm sure other students will apprecriate!
+                        </blockquote>
+                    </div>
+                </div>
+
+                <!--grid child for images-->
+                <div class="image-grid-item-1">
+                    <h1>Reviews</h1>
+                    <!-- image from freepik https://www.freepik.com/free-vector/homework-concept-illustration_137951275.htm -->
+                    <img class="about-image" src="./images/homework.png" alt="homework">
+                </div>
+
+                <div class="image-grid-item-2">
+                    <!-- image from freepik https://www.freepik.com/free-vector/grades-concept-illustration_5928129.htm -->
+                    <img class="about-image" src="./images/gradeA.jpg" alt="gradeA">
+                </div>
+
+                <div class="image-grid-item-3">
+                    <!-- image from freepik https://www.freepik.com/free-photo/pretty-schoolgirl-standing-showing-super-smiling_27447277.htm-->
+                    <img class="about-image" src="./images/student.jpg" alt="student-smilling">
+                </div>
+
+                <!--grid child for sponsors-->
+                <div class="sponsors-grid-item">
+                    <hr>
+                    <h1>Sponsors</h1>
+                    <!--image container for handling sponsor images-->
+                    <div class="sponsors-image-container">
+                        <div>
+                            <!-- image from new york cares website, great place for volunteering! -->
+                            <a href="https://www.newyorkcares.org/corporate-partners"><img src="./images/sponsors/NewYorkCaresLogo.png" alt="sponsor new york cares"></a>
+                        </div>
+                        <div>
+                            <!-- image from boston cares website -->
+                            <a href="https://www.bostoncares.org/"><img src="./images/sponsors/BostonCaresLogo.jpg" alt="sponsor boston cares"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-grid-item">
+                    <!-- 
+                        free video from Pixabay
+                        Author is Salvador Varón
+                        https://pixabay.com/users/salvadorvaron-20841522/?utm_source=link-attribution&utm_medium=referral&utm_campaign=video&utm_content=69625"
+                    -->
+                    <video class="about-video" controls autoplay muted height="300" src="./media/longervideo.mp4"></video>
+                    <hr>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- footer -->
+        <footer>
+            <div>
+                <!-- javascript function that updates the time and shows if office is close or open-->
+                <p id="display" style="font-weight: bold">""</p>
+                <br>
+                <p>1 Big Bang Theory Alley, Boston MA 02115</p>
+                <p>Open Monday - Saturday 11:00 AM to 6:00 PM</p>
+                <!-- link to email, for example purposes-->
+                <a href="mailto:contact@aplus_tutoring.com">contact@aplus__tutoring.com</a>
+                <br>
+            </div>
+            <p>Copyright © 2024 <span style="font-style: italic;">A + Tutoring</span></p>
+        </footer>
+
+    </div>
+</body>
+
+</html>

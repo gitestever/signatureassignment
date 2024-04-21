@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<!-- 
+    All pictures are used for education purposes. 
+    This website is created for a school project and is not affiliated with any businesses named A+ Tutoring.
+-->
+
+<!-- 
+    home page
+    Flexbox models
+    1 nav flex container
+    1 welcome flex container
+    information flex container
+-->
+
+<head>
+    <title>A+ Tutoring</title>
+    <link href="./stylesheets/tutoring.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kevin Mei">
+
+    <!-- icon next to tab title-->
+    <link rel="icon" type="image/x-icon" href="/images/branding/favi.png">
+
+    <!-- custom font from google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <script src="./scripts/functions.js"></script>
+</head>
+
+<body onload="showCurrentTime()">
+
+    <header>
+        <!-- custom logo created using canva-->
+        <a href="./index.html"><img src="./images/branding/mainlogo.png" alt="mainlogo"></a>
+    </header>
+
+    <!-- nav bar-->
+    <nav id="navbar">
+        <!-- 5 main menu buttons-->
+        <a href="./index.html" class="active">Home</a>
+        <a href="./tutors.html">Tutors</a>
+        <a href="./plans.html">Plans</a>
+        <a href="./about.html">About</a>
+        <a href="./join.html">Join us!</a>
+    </nav>
+
+    <!-- main content -->
+    <main>
+        <!-- welcome container includes video, message, and conversion action buttons-->
+        <section class="welcome-flex-container">
+
+            <!-- flex child welcome video loop-->
+            <div class="welcome-video-container">
+                <video controls autoplay loop muted class="welcome-video">
+                    <source src="./media/welcomevideo.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <!-- flex child (also a parent for nested elements) welcome message-->
+            <div class="welcome-message-container">
+                <div>
+                    <h1>Tutoring</h1>
+                    <p style="line-height: 32px">
+                        Since we've started tutoring, our students have shown excellent
+                        improvement and growth in their academic studies. Here at A+ tutoring, we prioritize the success
+                        of students by tutoring with the best minds!
+                    </p>
+                </div>
+
+                <!-- flex child conversion action buttons-->
+                <div class="button-container">
+                    <a href="./tutors.html" class="button-1">See our tutors ➜</a>
+                    <a href="./join.html" class="button-2">Join other students!</a>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- 
+            flex parent 
+            information about grade level requirements and services offered.
+            Shows only information, the idea is for parents and students to contact the office to find out more
+        -->
+        <section class="information-flex-container">
+            <!-- flex child grade level -->
+            <div>
+                <h1>For grades 6 to 12</h1>
+                <p>A+ Tutoring can help you with:</p>
+            </div>
+
+            <!-- flex child services -->
+            <div class="services-container">
+                <h3>Reviewing</h3>
+                <h3>Test Preparation</h3>
+                <h3>Homework</h3>
+            </div>
+
+            <!--
+                free image from freepik 
+                https://www.freepik.com/free-vector/homework-concept-illustration_137951275.htm#fromView=search&page=1&position=46&uuid=898b9d05-0fe1-4b7e-964d-c15f4880d361
+            -->
+            <img src="./images/reviewing.png" alt="tutoring" width="300">
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <div>
+            <!-- javascript function that updates the time and shows if office is close or open-->
+            <p id="display" style="font-weight: bold">""</p>
+            <br>
+            <p>1 Big Bang Theory Alley, Boston MA 02115</p>
+            <p>Open Monday - Saturday 11:00 AM to 6:00 PM</p>
+            <!-- link to email, for example purposes-->
+            <a href="mailto:contact@aplus_tutoring.com">contact@aplus__tutoring.com</a>
+            <br>
+        </div>
+        <p>Copyright © 2024 <span style="font-style: italic;">A + Tutoring</span></p>
+    </footer>
+</body>
+
+</html>

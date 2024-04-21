@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!--    
+    join us page 
+    Grid responsive container for forms
+-->
+
+<head>
+    <title>A+ Tutoring</title>
+    <link href="./stylesheets/tutoring.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kevin Mei">
+
+    <!-- icon next to tab title-->
+    <link rel="icon" type="image/x-icon" href="/images/branding/favi.png">
+
+    <!-- custom font from google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <script src="./scripts/functions.js"></script>
+</head>
+
+<body onload="showCurrentTime()">
+    <div class="page-container">
+
+        <header>
+            <!-- custom logo created using canva-->
+            <a href="./index.html"><img src="./images/branding/mainlogo.png" alt="mainlogo"></a>
+        </header>
+
+        <!-- nav bar-->
+        <nav>
+            <!-- 5 main menu buttons-->
+            <a href="./index.html">Home</a>
+            <a href="./tutors.html">Tutors</a>
+            <a href="./plans.html">Plans</a>
+            <a href="./about.html">About</a>
+            <a href="./join.html" class="active">Join us!</a>
+        </nav>
+
+        <!-- main content -->
+        <main>
+            <div>
+                <div class="join-description">
+                    <h1>Start your journey today.</h1>
+                    <!--image from https://www.freepik.com/free-photo/woman-talking-phone-with-copy-space_7452433.htm-->
+                    <img src="./images/contactus.png" alt="contact" class="contact-image">
+                    <p>Fill our form and we'll get in touch with you!</p>
+                    <p>We're also available by email <a
+                        href="mailto:contact@aplus_tutoring.com">contact@aplus__tutoring.com</a></p>
+                    <p>Phone: 123-456-7890</p>
+                    <p>We respond within 24 hours!</p>
+                </div>
+            </div>
+
+            <!-- Gridview form responsive -->
+            <form method="post">
+                <div class="form-grid-container">
+                    <!-- name text input -->
+                    <div class="form-item-grid-container">
+                        <div class="form-label"><label for="Name">Name</label></div>
+                        <div class="form-input"><input type="text" id="Name" name="Name" placeholder="First Last">
+                        </div>
+                    </div>
+
+                    <!-- email input -->
+                    <div class="form-item-grid-container">
+                        <div class="form-label"><label for="Email">E-mail</label></div>
+                        <div class="form-input">
+                            <input type="email" id="Email" name="Email" placeholder="name@example.com">
+                        </div>
+                    </div>
+
+                    <!-- phone input -->
+                    <div class="form-item-grid-container">
+                        <div class="form-label"><label for="Phone">Phone</label></div>
+                        <div class="form-input">
+                            <input type="tel" id="Phone" name="Phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                placeholder="123-456-7890" required>
+                        </div>
+                    </div>
+
+                    <!-- Parent / Student Select -->
+                    <div class="form-item-grid-container">
+                        <div class="form-label"><label for="Role">Role</label></div>
+                        <div class="form-input">
+                            <select id="Role" name="Role" required>
+                                <option value="" hidden>Select your role</option>
+                                <option>Student</option>
+                                <option>Parent</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Grade Level Select -->
+                    <div class="form-item-grid-container">
+                        <div class="form-label"><label for="Grade">Student Level</label></div>
+                        <div class="form-input">
+                            <select id="Grade" name="Grade" required>
+                                <option value="" hidden>Select a grade</option>
+                                <option>Grade 6</option>
+                                <option>Grade 7</option>
+                                <option>Grade 8</option>
+                                <option>Grade 9</option>
+                                <option>Grade 10</option>
+                                <option>Grade 11</option>
+                                <option>Grade 12</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Session Select -->
+                    <div class="form-item-grid-container">
+                        <div class="form-label"><label for="Session">Session Type</label></div>
+                        <div class="form-input">
+                            <select id="Session" name="Session" required>
+                                <option value="" hidden>Select session type</option>
+                                <option>Virtual</option>
+                                <option>On-site</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Tutors Checkbox -->
+                    <div class="form-item-grid-container">
+                        <div class="form-label"><label>Select Tutors</label></div>
+                        <div class="checkbox-tutors">
+                            <div>
+                                <input type="checkbox" id="Leonard" name="Leonard">
+                                <label for="Leonard">Leonard (math)</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="Penny" name="Penny">
+                                <label for="Penny">Penny (english)</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="Raj" name="Raj">
+                                <label for="Raj">Raj (science)</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="Sheldon" name="Sheldon">
+                                <label for="Sheldon">Sheldon (physics)</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Session Select -->
+                    <div class="form-item-grid-container">
+                        <div class="form-label"><label for="Plan">Select Plan</label></div>
+                        <div class="form-input">
+                            <select id="Plan" name="Plan" required>
+                                <option value="" hidden>Select a plan</option>
+                                <option>Flex Plan 6 weeks</option>
+                                <option>Smart Plan 12 weeks</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Questions textarea -->
+                    <div class="form-item-grid-container">
+                        <div class="form-label"><label for="Questions">Question or Concern?</label></div>
+                        <div class="form-input"><textarea id="Questions" name="Questions" rows="5" cols="30"
+                                placeholder="Send a message..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button-->
+                    <div class="form-item-grid-container">
+                        <div class="form-label"></div>
+                            <input type="submit" value="Submit" onsubmit="showFormSubmit()">
+                    </div>
+
+                </div>
+            </form>
+        </main>
+
+        <!-- footer -->
+        <footer>
+            <div>
+                <!-- javascript function that updates the time and shows if office is close or open-->
+                <p id="display" style="font-weight: bold">""</p>
+                <br>
+                <p>1 Big Bang Theory Alley, Boston MA 02115</p>
+                <p>Open Monday - Saturday 11:00 AM to 6:00 PM</p>
+                <!-- link to email, for example purposes-->
+                <a href="mailto:contact@aplus_tutoring_example.com">contact@aplus_tutoring_example.com</a>
+                <br>
+            </div>
+            <p>Copyright © 2024 <span style="font-style: italic;">A + Tutoring</span></p>
+        </footer>
+
+    </div>
+</body>
+
+</html>

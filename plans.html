@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!--
+    Plans page
+    Float and Box Model
+-->
+
+<head>
+    <title>A+ Tutoring</title>
+    <link href="./stylesheets/tutoring.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kevin Mei">
+
+    <!-- icon next to tab title-->
+    <link rel="icon" type="image/x-icon" href="/images/branding/favi.png">
+
+    <!-- custom font from google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <script src="./scripts/functions.js"></script>
+</head>
+
+<body onload="showCurrentTime()">
+    <div class="page-container">
+
+        <header>
+            <!-- custom logo created using canva-->
+            <a href="./index.html"><img src="./images/branding/mainlogo.png" alt="mainlogo"></a>
+        </header>
+
+        <!-- nav bar-->
+        <nav>
+            <!-- 5 main menu buttons-->
+            <a href="./index.html">Home</a>
+            <a href="./tutors.html">Tutors</a>
+            <a href="./plans.html" class="active">Plans</a>
+            <a href="./about.html">About</a>
+            <a href="./join.html">Join us!</a>
+        </nav>
+
+        <!-- main content -->
+        <main>
+            <div class="float-container">
+
+                <!-- plan 1 flex plan, to the left-->
+                <div class="float-1">
+                    <div class="flex">
+                        <h1>Flex Plan</h1>
+                        <p>This plan applies to your choice of tutor</p>
+                        <ul>
+                            <li><b>6 weeks in total</b></li>
+                            <li>Continuous or bi-weekly</li>
+                            <li>virtual or on-site location</li>
+                            <li>Meets once per week per subject</li>
+                        </ul>
+                        <br>
+                        <ul>
+                            <li><b>$35</b> per hour (2 hours per session)</li>
+                            <li>Contact us to see total pricing!</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- plan 2 smart plan, to the right-->
+                <div class="float-2">
+                    <div class="smart">
+                        <h1>Smart Plan</h1>
+                        <p>This plan applies to your choice of tutor</p>
+                        <ul>
+                            <li><b>12 weeks in total</b></li>
+                            <li>Continuous or bi-weekly</li>
+                            <li>virtual or on-site location</li>
+                            <li>Meets once per week per subject</li>
+                        </ul>
+                        <br>
+                        <ul>
+                            <li><b>$29</b> per hour (2 hours per session)</li>
+                            <li>Contact us to see total pricing!</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- footer -->
+        <footer>
+            <div>
+                <!-- javascript function that updates the time and shows if office is close or open-->
+                <p id="display" style="font-weight: bold">""</p>
+                <br>
+                <p>1 Big Bang Theory Alley, Boston MA 02115</p>
+                <p>Open Monday - Saturday 11:00 AM to 6:00 PM</p>
+                <!-- link to email, for example purposes-->
+                <a href="mailto:contact@aplus_tutoring.com">contact@aplus__tutoring.com</a>
+                <br>
+            </div>
+            <p>Copyright © 2024 <span style="font-style: italic;">A + Tutoring</span></p>
+        </footer>
+
+    </div>
+</body>
+
+</html>
