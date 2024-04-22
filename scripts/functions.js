@@ -37,7 +37,7 @@ function showCurrentTime() {
 
         const light = (hours > 12 && hours < 24) ? "PM" : "AM"
 
-        const available = ((hours > 11 && hours < 18) && (day > 1 && day < 7)) ? "Open" : "Closed"
+        const available = ((hours > 11 && hours < 18) && (day > 0 && day < 7)) ? "Open" : "Closed"
 
         display.innerText = `
             Today is ${dateSet[day]}\n
